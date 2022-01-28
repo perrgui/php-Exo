@@ -10,7 +10,7 @@ function tva(?float $price): ?float{
 function affichage($product){
     ?>
          <tr>
-             <td><?= $product['name'];?></td>
+            <td><?= $product['name'];?></td>
              <td><?= tva($product['price taxed']);?></td>
              <td <?php if ($product['price taxed'] <= 12) { ?>style ="color:green"<?php } ?>>
              <?= $product['price taxed']; ?></td>
