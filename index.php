@@ -13,7 +13,7 @@ $i=0;
         <div class="card-body">
             <h5 class="card-title"><?= $product['name']?></h5>
             <p class="card-text"><?= $product['descriptionShort'] ?></p>
-            <a href="list.php" class="btn btn-primary">details of the product</a>
+            <a href="list.php" class="btn btn-primary">see all products</a>
         </div>
     </div>
     <?php if (++$i == 3) break ?>
