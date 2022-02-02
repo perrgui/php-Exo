@@ -14,7 +14,7 @@ $i=0;
         <div class="card-body">
             <h5 class="card-title"><?= $product['name']?></h5>
             <p class="card-text"><?= $product['descriptionShort'] ?></p>
-            <a href="../list.php" class="btn btn-primary justify-content-center align-items-center">buy this product</a>
+            <a href="list.php" class="btn btn-primary justify-content-center align-items-center">buy this product</a>
         </div>
 
     </div>

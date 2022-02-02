@@ -1,4 +1,4 @@
-.title {
-  flex: auto;
-  text-align: center;
+#footerAll {
+  position: fixed;
+  bottom: 0;
 }
