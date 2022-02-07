@@ -1,27 +1,42 @@
 <?php
+
 $pageTitle = "page de connection";
 include 'includes/header.php';
 
-if (isset($_POST['email'])) {
-  $_SESSION['email'] = $_POST['email'];
-  header('location: index.php?login=success'); // ? === $_GET
-}
+$defaultPassword = "toto";
 $errorMess = [];
 
-foreach ($errorMess as $message) {
-  if (!'login=success') {
+if (isset($_POST['email']) && isset($_POST['password'])) {
+  $password = $_POST['password'];
+
+  if (empty($password)) {
+    $errorMess[] = "veuillez renseigner un mot de passe";
+  } elseif ($password != $defaultPassword) {
+    $errorMess[] = "le code rentré est incorrect!";
+  }
+
+  if (empty($errorMess)) {
+    $_SESSION['email'] = $_POST['email'];
 ?>
-    <div class="alert alert-warning" role="alert">
-      Mot de passe éronné!
-    </div>
-  <?php } else {
-  ?>
     <div class="alert alert-success" role="alert">
-      Mot de passe correct!
-    </div>
-  <?php } ?>
+      Vous êtes bien connectés! </div>
+<?php
+    header('location: index.php?login=success'); // ? === $_GET
+  }
+}
+?>
+
+
+<?php foreach ($errorMess as $message) {
+
+?>
+  <div class="alert alert-warning" role="alert">
+    <?= $message; ?>
+  </div>
 <?php }
 ?>
+
+
 
 
 

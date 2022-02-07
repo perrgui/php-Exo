@@ -4,6 +4,10 @@
   include 'function.php';
   include 'variables.php';
 
+  // if (isset($_POST['login'])) {
+  //   $_SESSION['login'] = $_POST['login'];
+  // }
+
   if (!isset($pageTitle)) {
     $pageTitle = "Titre non défini";
   }
