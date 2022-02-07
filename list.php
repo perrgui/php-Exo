@@ -1,10 +1,11 @@
 <?php
+$pageTitle= 'liste des produits';
 include 'includes/header.php';
 ?>
 
-<table>
+<table class="table">
     
-    <tr>
+    <tr class="table-primary">
         <th><strong>nom </strong></th>
         <th><strong>prix hors taxes</strong></th>
         <th><strong>prix</strong></th>
